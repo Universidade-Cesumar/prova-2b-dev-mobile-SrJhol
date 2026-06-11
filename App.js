@@ -3,8 +3,53 @@ import { StyleSheet, Text, View, TextInput, TouchableOpacity, FlatList, Activity
 
 export default function App() {
   // --- Estados da Aplicação (Os alunos implementarão aqui) ---
+  const [nome, setNome] = useState('');
+  const [quantidade, setQuantidade] = useState('');
+  const [materiais, setMateriais] = useState([]);
 
   // --- Funções de Requisição e Efeitos (Os alunos implementarão aqui) ---
+  const API_URL = 'https://6a2b364bb687a7d5cbc4f485.mockapi.io/materiais';
+
+  useEffect(() => {
+    buscarMateriais();
+  }, []);
+
+  async function buscarMateriais() {
+    try {
+      const resposta = await fetch(API_URL);
+      const dados = await resposta.json();
+      setMateriais(dados);
+    } catch (erro) {
+      console.log('Erro ao buscar materiais:', erro);
+    }
+  }
+
+  async function cadastrarMaterial() {
+    if (nome === '' || quantidade === '') {
+      return;
+    }
+
+    const novoMaterial = {
+      nome: nome,
+      quantidade: quantidade
+    };
+
+    try {
+      await fetch(API_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(novoMaterial)
+      });
+
+      setNome('');
+      setQuantidade('');
+      buscarMateriais();
+    } catch (erro) {
+      console.log('Erro ao cadastrar material:', erro);
+    }
+  }
 
   return (
     <View style={styles.container}>
