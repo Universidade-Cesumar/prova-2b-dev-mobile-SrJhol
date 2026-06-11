@@ -126,6 +126,12 @@ const styles = StyleSheet.create({
   fontWeight: 'bold',
   },
 
+  itemLista: {
+    padding: 12,
+    borderBottomWidth: 1,
+    borderBottomColor: '#ddd',
+  }
+
   container: {
     flex: 1,
     backgroundColor: '#fff',
