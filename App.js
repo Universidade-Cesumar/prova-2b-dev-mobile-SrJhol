@@ -68,6 +68,14 @@ export default function App() {
         placeholder="Nome do material"
         value={nome}
         onChangeText={setNome}
+      />
+      <TextInput
+        testID="input-quantidade"
+        style={styles.input}
+        placeholder="Quantidade"
+        value={quantidade}
+        onChangeText={setQuantidade}
+        keyboardType="numeric"
       />}
       
     </View>
