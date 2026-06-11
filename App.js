@@ -76,7 +76,16 @@ export default function App() {
         value={quantidade}
         onChangeText={setQuantidade}
         keyboardType="numeric"
-      />}
+      />
+      <TouchableOpacity
+        testID="btn-cadastrar"
+        style={styles.botao}
+        onPress={cadastrarMaterial}
+      >
+        <Text style={styles.textoBotao}>
+          Cadastrar
+        </Text>
+      </TouchableOpacity>}
       
     </View>
   );
