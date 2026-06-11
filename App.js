@@ -130,7 +130,7 @@ const styles = StyleSheet.create({
     padding: 12,
     borderBottomWidth: 1,
     borderBottomColor: '#ddd',
-  }
+  },
 
   container: {
     flex: 1,
