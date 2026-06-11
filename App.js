@@ -85,7 +85,19 @@ export default function App() {
         <Text style={styles.textoBotao}>
           Cadastrar
         </Text>
-      </TouchableOpacity>}
+      </TouchableOpacity>
+
+      <FlatList
+        testID="lista-materials"
+        data={materiais}
+        keyExtractor={(item) => item.id}
+        renderItem={({ item }) => (
+          <View style={styles.itemLista}>
+            <Text>{item.nome}</Text>
+            <Text>Quantidade: {item.quantidade}</Text>
+          </View>
+        )}
+      />}
       
     </View>
   );
