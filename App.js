@@ -104,6 +104,16 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
+
+
+  botao: {
+    backgroundColor: '#007bff',
+    padding: 12,
+    borderRadius: 8,
+    alignItems: 'center',
+    marginBottom: 20,
+  },
+
   container: {
     flex: 1,
     backgroundColor: '#fff',
