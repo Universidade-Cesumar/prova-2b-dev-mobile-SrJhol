@@ -121,6 +121,11 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
 
+  textoBotao: {
+  color: '#fff',
+  fontWeight: 'bold',
+  },
+
   container: {
     flex: 1,
     backgroundColor: '#fff',
