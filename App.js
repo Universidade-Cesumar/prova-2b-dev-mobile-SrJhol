@@ -72,7 +72,7 @@ export default function App() {
       <TextInput
         testID="input-quantidade"
         style={styles.input}
-        placeholder="Quantidade"
+        placeholder="Digite a quantidade"
         value={quantidade}
         onChangeText={setQuantidade}
         keyboardType="numeric"
