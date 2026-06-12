@@ -94,7 +94,7 @@ export default function App() {
         renderItem={({ item }) => (
           <View style={styles.itemLista}>
             <Text>{item.nome}</Text>
-            <Text>Quantidade: {item.quantidade}</Text>
+            <Text>Estoque atual: {item.quantidade}</Text>
           </View>
         )}
       />
