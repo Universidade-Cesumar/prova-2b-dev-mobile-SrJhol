@@ -65,7 +65,7 @@ export default function App() {
       <TextInput
         testID="input-nome"
         style={styles.input}
-        placeholder="Nome do material"
+        placeholder="Digite o nome do material"
         value={nome}
         onChangeText={setNome}
       />
