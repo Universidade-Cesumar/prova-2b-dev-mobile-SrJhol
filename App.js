@@ -25,7 +25,7 @@ export default function App() {
   }
 
   async function cadastrarMaterial() {
-    if (nome === '' || quantidade === '') {
+    if (nome.trim() === '' || quantidade.trim() === '') {
       return;
     }
 
