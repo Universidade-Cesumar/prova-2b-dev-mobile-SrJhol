@@ -130,6 +130,7 @@ const styles = StyleSheet.create({
     padding: 12,
     borderBottomWidth: 1,
     borderBottomColor: '#ddd',
+    marginBottom: 5,
   },
 
   container: {
