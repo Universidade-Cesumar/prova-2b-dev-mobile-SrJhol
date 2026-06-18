@@ -158,6 +158,14 @@ export default function App() {
               keyboardType="numeric"
             />
 
+            <TouchableOpacity
+              testID="btn-baixar"
+              style={styles.botaoBaixar}
+              onPress={() => baixarMaterial(item)}
+            >
+              <Text style={styles.textoBotao}>Baixar</Text>
+            </TouchableOpacity>
+
           </View>
         )}
       />
