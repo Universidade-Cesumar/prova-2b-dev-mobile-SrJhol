@@ -60,6 +60,38 @@ export default function App() {
     });
   }
 
+  async function baixarMaterial(material) {
+    const quantidadeRetirada = retiradas[material.id] || '';
+
+    if (!validarRetirada(material.quantidade, quantidadeRetirada)) {
+      return;
+    }
+
+    const novaQuantidade = Number(material.quantidade) - Number(quantidadeRetirada);
+
+    try {
+      await fetch(`${API_URL}/${material.id}`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          ...material,
+          quantidade: novaQuantidade
+        })
+      });
+  
+      setRetiradas({
+        ...retiradas,
+        [material.id]: ''
+      });
+
+      buscarMateriais();
+    } catch (erro) {
+      console.log('Erro ao baixar material:', erro);
+    }
+  }
+
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Almoxarifado - Enfermagem</Text>
