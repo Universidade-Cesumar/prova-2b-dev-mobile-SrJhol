@@ -148,6 +148,16 @@ export default function App() {
           <View style={styles.itemLista}>
             <Text>{item.nome}</Text>
             <Text>Estoque atual: {item.quantidade}</Text>
+
+            <TextInput
+              testID="input-retirada"
+              style={styles.inputRetirada}
+              placeholder="Qtd. retirada"
+              value={retiradas[item.id] || ''}
+              onChangeText={(valor) => alterarRetirada(item.id, valor)}
+              keyboardType="numeric"
+            />
+
           </View>
         )}
       />
