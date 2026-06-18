@@ -80,7 +80,7 @@ export default function App() {
           quantidade: novaQuantidade
         })
       });
-  
+
       setRetiradas({
         ...retiradas,
         [material.id]: ''
@@ -89,6 +89,18 @@ export default function App() {
       buscarMateriais();
     } catch (erro) {
       console.log('Erro ao baixar material:', erro);
+    }
+  }
+
+  async function excluirMaterial(id) {
+    try {
+      await fetch(`${API_URL}/${id}`, {
+        method: 'DELETE'
+      });
+
+      buscarMateriais();
+    } catch (erro) {
+      console.log('Erro ao excluir material:', erro);
     }
   }
 
