@@ -166,6 +166,14 @@ export default function App() {
               <Text style={styles.textoBotao}>Baixar</Text>
             </TouchableOpacity>
 
+            <TouchableOpacity
+              testID="btn-excluir"
+              style={styles.botaoExcluir}
+              onPress={() => excluirMaterial(item.id)}
+            >
+              <Text style={styles.textoBotao}>Excluir</Text>
+            </TouchableOpacity>
+
           </View>
         )}
       />
