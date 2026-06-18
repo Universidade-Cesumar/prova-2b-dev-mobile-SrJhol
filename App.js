@@ -53,6 +53,13 @@ export default function App() {
     }
   }
 
+  function alterarRetirada(id, valor) {
+    setRetiradas({
+      ...retiradas,
+      [id]: valor
+    });
+  }
+
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Almoxarifado - Enfermagem</Text>
