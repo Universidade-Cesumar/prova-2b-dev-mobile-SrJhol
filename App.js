@@ -240,6 +240,14 @@ const styles = StyleSheet.create({
     padding: 8,
     marginTop: 10,
     marginBottom: 8,
+  },
+
+  botaoBaixar: {
+    backgroundColor: '#28a745',
+    padding: 10,
+    borderRadius: 8,
+    alignItems: 'center',
+    marginBottom: 8,
   }
 
 });
