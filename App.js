@@ -248,7 +248,7 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     alignItems: 'center',
     marginBottom: 8,
-  }
+  },
 
   botaoExcluir: {
     backgroundColor: '#dc3545',
