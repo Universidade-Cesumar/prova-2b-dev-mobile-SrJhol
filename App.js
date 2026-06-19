@@ -250,4 +250,11 @@ const styles = StyleSheet.create({
     marginBottom: 8,
   }
 
+  botaoExcluir: {
+    backgroundColor: '#dc3545',
+    padding: 10,
+    borderRadius: 8,
+    alignItems: 'center',
+  },
+
 });
