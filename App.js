@@ -146,6 +146,14 @@ export default function App() {
         </Text>
       </TouchableOpacity>
 
+      <TextInput
+        testID="input-busca"
+        style={styles.input}
+        placeholder="Pesquisar material"
+        value={busca}
+        onChangeText={setBusca}
+      />
+
       <FlatList
         testID="lista-materials"
         data={materiais}
