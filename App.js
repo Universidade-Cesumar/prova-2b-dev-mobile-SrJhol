@@ -154,6 +154,10 @@ export default function App() {
         onChangeText={setBusca}
       />
 
+      <Text testID="total-itens" style={styles.totalItens}>
+        Total de itens: {materiaisFiltrados.length}
+      </Text>
+
       <FlatList
         testID="lista-materials"
         data={materiaisFiltrados}
