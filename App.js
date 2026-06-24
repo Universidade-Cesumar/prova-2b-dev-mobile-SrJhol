@@ -9,6 +9,7 @@ export default function App() {
   const [materiais, setMateriais] = useState([]);
   const [retiradas, setRetiradas] = useState({});
   const [busca, setBusca] = useState('');
+  const [erroConexao, setErroConexao] = useState('');
 
   // --- Funções de Requisição e Efeitos (Os alunos implementarão aqui) ---
   const API_URL = 'https://6a2b364bb687a7d5cbc4f485.mockapi.io/materiais';
