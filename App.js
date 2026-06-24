@@ -281,6 +281,12 @@ const styles = StyleSheet.create({
     marginBottom: 15,
     textAlign: 'center',
     color: '#333',
+  },
+
+  itemCritico: {
+    backgroundColor: '#ffe5e5',
+    borderColor: '#ff4d4d',
+    borderWidth: 1,
   }
 
 });
