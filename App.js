@@ -275,4 +275,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
 
+  totalItens: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    marginBottom: 15,
+    textAlign: 'center',
+    color: '#333',
+  }
+
 });
