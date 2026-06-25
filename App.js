@@ -123,6 +123,12 @@ export default function App() {
         Através desta interface conectada à API, é possível realizar o inventário em tempo real, cadastrar novos materiais e registrar baixas de estoque de forma ágil e segura.
       </Text>
 
+      {erroConexao !== '' && (
+        <Text style={styles.erroTexto}>
+          {erroConexao}
+        </Text>
+      )}
+
       {/* Os alunos vão construir os componentes visuais das Sprints aqui dentro */}
       <TextInput
         testID="input-nome"
