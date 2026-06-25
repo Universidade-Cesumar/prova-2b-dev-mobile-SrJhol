@@ -54,6 +54,8 @@ export default function App() {
       setQuantidade('');
       buscarMateriais();
     } catch (erro) {
+    setErroConexao('Erro ao cadastrar material. Tente novamente.');
+    
       console.log('Erro ao cadastrar material:', erro);
     }
   }
