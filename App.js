@@ -163,7 +163,13 @@ export default function App() {
         data={materiaisFiltrados}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
-          <View style={styles.itemLista}>
+          <View
+            style={[
+              styles.itemLista,
+              Number(item.quantidade) < 10 && styles.itemCritico
+            ]}
+            accessibilityLabel={Number(item.quantidade) < 10 ? 'estoque-critico' : undefined}
+          >
             <Text>{item.nome}</Text>
             <Text>Estoque atual: {item.quantidade}</Text>
 
