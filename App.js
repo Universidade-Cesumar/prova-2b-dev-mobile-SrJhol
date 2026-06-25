@@ -302,6 +302,13 @@ const styles = StyleSheet.create({
     backgroundColor: '#ffe5e5',
     borderColor: '#ff4d4d',
     borderWidth: 1,
+  },
+
+  erroTexto: {
+    color: '#b00020',
+    textAlign: 'center',
+    marginBottom: 10,
+    fontWeight: 'bold',
   }
 
 });
