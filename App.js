@@ -55,7 +55,7 @@ export default function App() {
       buscarMateriais();
     } catch (erro) {
     setErroConexao('Erro ao cadastrar material. Tente novamente.');
-    
+
       console.log('Erro ao cadastrar material:', erro);
     }
   }
@@ -95,6 +95,8 @@ export default function App() {
 
       buscarMateriais();
     } catch (erro) {
+    setErroConexao('Erro ao excluir material. Tente novamente.');
+
       console.log('Erro ao baixar material:', erro);
     }
   }
@@ -107,6 +109,8 @@ export default function App() {
 
       buscarMateriais();
     } catch (erro) {
+      setErroConexao('Erro ao excluir material. Tente novamente.');
+      
       console.log('Erro ao excluir material:', erro);
     }
   }
