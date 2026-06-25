@@ -25,6 +25,8 @@ export default function App() {
       setErroConexao('');
       setMateriais(dados);
     } catch (erro) {
+      setErroConexao('Erro ao carregar materiais. Verifique sua conexão.');
+
       console.log('Erro ao buscar materiais:', erro);
     }
   }
