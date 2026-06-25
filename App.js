@@ -95,7 +95,7 @@ export default function App() {
 
       buscarMateriais();
     } catch (erro) {
-    setErroConexao('Erro ao excluir material. Tente novamente.');
+    setErroConexao('Erro ao baixar estoque. Tente novamente.');
 
       console.log('Erro ao baixar material:', erro);
     }
@@ -110,7 +110,7 @@ export default function App() {
       buscarMateriais();
     } catch (erro) {
       setErroConexao('Erro ao excluir material. Tente novamente.');
-      
+
       console.log('Erro ao excluir material:', erro);
     }
   }
