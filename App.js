@@ -22,6 +22,7 @@ export default function App() {
     try {
       const resposta = await fetch(API_URL);
       const dados = await resposta.json();
+      setErroConexao('');
       setMateriais(dados);
     } catch (erro) {
       console.log('Erro ao buscar materiais:', erro);
